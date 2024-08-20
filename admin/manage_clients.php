@@ -6,7 +6,10 @@ include '../includes/header.php';
 $result = $mysqli->query("SELECT * FROM clients");
 ?>
 
+<div style="display: flex;justify-content: space-between;">
 <h2>Manage Clients</h2>
+<a class="btn btn-primary" href="./add_client.php">Add Client</a>
+</div>
 <table class="table table-striped">
     <thead>
         <tr>

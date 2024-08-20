@@ -19,7 +19,7 @@ $result = $mysqli->query("SELECT * FROM issues");
     <tbody>
         <?php while ($issue = $result->fetch_assoc()): ?>
             <tr>
-                <td><?php echo $issue['title']; ?></td>
+                <td><?php echo $issue['subject']; ?></td>
                 <td><?php echo $issue['description']; ?></td>
                 <td><?php echo $issue['status']; ?></td>
                 <td>

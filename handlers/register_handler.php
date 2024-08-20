@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = $_POST['phone'];
     $password = md5($_POST['password']);
 
-    $stmt = $mysqli->prepare("INSERT INTO users (name, email, phone, password, role) VALUES (?, ?, ?, ?, 'employee')");
+    $stmt = $mysqli->prepare("INSERT INTO users (username, email, phone, password, role) VALUES (?, ?, ?, ?, 'client')");
     $stmt->bind_param('ssss', $name, $email, $phone, $password);
 
     if ($stmt->execute()) {

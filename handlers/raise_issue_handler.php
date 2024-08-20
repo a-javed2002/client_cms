@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $issue_title = $_POST['issue_title'];
     $issue_description = $_POST['issue_description'];
 
-    $stmt = $mysqli->prepare("INSERT INTO issues (title, description, status) VALUES (?, ?, 'open')");
+    $stmt = $mysqli->prepare("INSERT INTO issues (subject, description, status) VALUES (?, ?, 'open')");
     $stmt->bind_param('ss', $issue_title, $issue_description);
 
     if ($stmt->execute()) {
